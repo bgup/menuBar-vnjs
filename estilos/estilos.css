@@ -5,7 +5,7 @@
 }
 body{
     font-family: 'Courier New', Courier, monospace;
-    background-color: #333;
+    background-color: #fff;
     color: #333;
 }
 .navbar{
@@ -44,7 +44,6 @@ body{
     float: right;
     list-style: none;
     height: inherit;
-    height: inherit;
     line-height: inherit;
     padding: 0 50px;
 }
@@ -81,11 +80,11 @@ body{
         width: 100%;
         padding: 0;
         background-color: rgba( 0  , 0, 0, .9);
+        /* height: auto; */
         height: 100vh;
-        max-height: 100vh;
+        max-height: 0;
         overflow: hidden;
         transition: all ease-in-out .3s;
-        display: none;
     }
     .navbar ul.open{
         max-height: 100vh
@@ -105,11 +104,14 @@ body{
         right: 20px;
         background-color: transparent;
         color: #fff;
+        border: none;/* cambiar el borde del  boton  */   
+        border-radius: 3px;
         border: 3px solid #fff;
         outline: none;
         padding: 0 5px;
-        cursor: pointer;
-        border: none;
+        cursor: pointer;  
+       
+        
     }
     .navbar .navbar-toggler span,
     .navbar .navbar-toggler span::before,
@@ -127,5 +129,14 @@ body{
     }
     .navbar .navbar-toggler span::after{
         transform: translateY(5px)
+    }
+    .navbar .navbar-toggler .open-navbar-toggler span{
+        background-color: transparent;
+    }
+    .navbar .navbar-toggler .open-navbar-toggler span::before{
+        transform: translateY(0px) rotate(45deg);
+    }
+    .navbar .navbar-toggler .open-navbar-toggler span::after{
+        transform: translateY(-3px) rotate(-45deg) ;
     }
 }
